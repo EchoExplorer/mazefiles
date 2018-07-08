@@ -1,0 +1,6 @@
+/dataOutput
+/archive
+consent.set
+
+# no secrets in the repo!
+*.pem
