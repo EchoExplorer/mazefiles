@@ -16,7 +16,7 @@ levelOut = "levelOutput " + time + ".csv"
 with open(dataRoot + levelOut, 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(['rowID' ,'userName', 'currentLevel', 'trackCount', 'crashCount',
-                     'stepCount', 'timeElapsed', 'total crashes', 'startTime', 'endTime', 'asciiLevelRep', 
+                     'stepCount', 'timeElapsed', 'totalCrashes', 'startTime', 'endTime', 'asciiLevelRep', 
                      'levelRecord', 'serverDateTimeStamp'])
     writer.writerows(data)
 
