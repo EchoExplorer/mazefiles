@@ -15,7 +15,7 @@ levelOut = "levelOutput " + time + ".csv"
 with open(dataRoot + levelOut, 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 'crashCount',
-                     'stepCount', 'timeElapsed', 'totalEchoes', 'startTime', 'endTime', 'asciiLevelRep',
+                     'stepCount', 'timeElapsed', 'startTime', 'endTime', 'asciiLevelRep',
                      'levelRecord', 'serverDateTimeStamp'])
     writer.writerows(data)
 
@@ -23,7 +23,7 @@ data = cursor.execute("SELECT * FROM EchoData")
 echoOut = "echoOutput " + time + ".csv"
 with open(dataRoot + echoOut, 'wb') as f:
     writer = csv.writer(f)
-    writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount',
+    writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 'echo',
                      'echoLocation', 'postEchoAction', 'correctAction', 'dateTimeStamp'])
     writer.writerows(data)
 
