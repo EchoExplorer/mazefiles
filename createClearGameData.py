@@ -13,13 +13,13 @@ cursor.execute("DROP TABLE IF EXISTS LevelData")
 cursor.execute('''
             CREATE TABLE LevelData(id INTEGER PRIMARY KEY, userName TEXT,
             currentLevel INTEGER, trackCount INTEGER, crashCount INTEGER,
-            stepCount INTEGER, timeElapsed FLOAT, startTime TEXT, endTime TEXT,
+            stepCount INTEGER, timeElapsed FLOAT, totalEchoes INTEGER, startTime TEXT, endTime TEXT,
             asciiLevelRep TEXT, levelRecord TEXT, dateTimeStamp TIMESTAMP)''')
 
 cursor.execute("DROP TABLE IF EXISTS EchoData")
 cursor.execute('''
             CREATE TABLE EchoData(id INTEGER PRIMARY KEY, userName TEXT,
-            currentLevel INTEGER, trackCount INTEGER,  echo TEXT,
+            currentLevel INTEGER, trackCount INTEGER,
             echoLocation TEXT, postEchoAction TEXT, correctAction TEXT,
             dateTimeStamp TEXT)''')
 
@@ -47,12 +47,10 @@ cursor.execute('''
 cursor.execute("DROP TABLE IF EXISTS SurveyData")
 cursor.execute('''
             CREATE TABLE SurveyData(id INTEGER PRIMARY KEY, surveyID TEXT,
-            controls TEXT, easy TEXT, echonavigate TEXT, enjoy TEXT,
-            frustrating TEXT, hearingimpaired TEXT, hints TEXT,
-            instructions TEXT, look TEXT, lost TEXT, playmore TEXT,
-            tutorial TEXT, tutorialhelp TEXT, understandecho TEXT,
-            visuallyimpaired TEXT, email TEXT, likes TEXT, confusions TEXT,
-            suggestions TEXT, dateTimeStamp TEXT)''')
+            enjoy TEXT, playmore TEXT, easy TEXT, lost TEXT, understandecho TEXT, 
+            frustrating TEXT, tutorial TEXT, tutorialhelp TEXT, hints TEXT,           
+            instructions TEXT, controls TEXT, look TEXT, echonavigate TEXT,
+            visuallyimpaired TEXT, hearingimpaired TEXT, dateTimeStamp TEXT)''')
 
 db.close()
 

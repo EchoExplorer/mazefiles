@@ -15,7 +15,7 @@ levelOut = "levelOutput " + time + ".csv"
 with open(dataRoot + levelOut, 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 'crashCount',
-                     'stepCount', 'timeElapsed', 'startTime', 'endTime', 'asciiLevelRep',
+                     'stepCount', 'timeElapsed', 'totalEchoes', 'startTime', 'endTime', 'asciiLevelRep',
                      'levelRecord', 'serverDateTimeStamp'])
     writer.writerows(data)
 
@@ -23,7 +23,7 @@ data = cursor.execute("SELECT * FROM EchoData")
 echoOut = "echoOutput " + time + ".csv"
 with open(dataRoot + echoOut, 'wb') as f:
     writer = csv.writer(f)
-    writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 'echo',
+    writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 
                      'echoLocation', 'postEchoAction', 'correctAction', 'dateTimeStamp'])
     writer.writerows(data)
 
@@ -39,7 +39,10 @@ data = cursor.execute("SELECT * FROM SurveyData")
 surveyOut = "surveyOutput " + time + ".csv"
 with open(dataRoot + surveyOut, 'wb') as f:
     writer = csv.writer(f)
-    writer.writerow(['rowID', 'surveyID', 'dateTimeStamp'])
+    writer.writerow(['rowID', 'surveyID', 'enjoy', 'playmore', 'easy', 'lost', 'understandecho', 
+                     'frustrating', 'tutorial', 'tutorialhelp', 'hints', 'instructions', 
+                    'controls', 'look', 'echonavigate', 'visuallyimpaired', 'hearingimpaired', 
+                    'dateTimeStamp'])
     writer.writerows(data)
 
 data = cursor.execute("SELECT * FROM SurveyIDData")
