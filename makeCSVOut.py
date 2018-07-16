@@ -15,8 +15,8 @@ data = cursor.execute("SELECT * FROM LevelData")
 levelOut = "levelOutput " + time + ".csv"
 with open(dataRoot + levelOut, 'wb') as f:
     writer = csv.writer(f)
-    writer.writerow(['rowID' ,'userName', 'currentLevel', 'trackCount', 'crashCount',
-                     'stepCount', 'timeElapsed', 'totalEchoes', 'startTime', 'endTime', 'asciiLevelRep',
+    writer.writerow(['rowID', 'userName', 'currentLevel', 'trackCount', 'crashCount',
+                     'stepCount', 'timeElapsed', 'totalEchoes', 'startTime', 'endTime', 'exitAttempts', 'asciiLevelRep',
                      'levelRecord', 'serverDateTimeStamp'])
     writer.writerows(data)
 
