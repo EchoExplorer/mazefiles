@@ -61,7 +61,7 @@ with open(dataRoot + ConsentIDOut, 'wb') as f:
 
 db.close()
 
-print "Script completed."
+print "Script Completed."
 
 """
 print "Content-type:text/html\r\n\r\n"
