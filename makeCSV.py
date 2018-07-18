@@ -11,7 +11,7 @@ for i in temp:
     if i != "/" :
         time += i
     else :
-        time += "_"
+        time += "-"
 
 
 db = sqlite3.connect('/srv/sqlite/data/gameData')
