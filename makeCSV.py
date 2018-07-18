@@ -7,7 +7,7 @@ dataRoot = '/srv/maze/dataOutput/recent/'
 temp = str(datetime.datetime.now())
 time = ""
 
-for i in time:
+for i in temp:
     if i != "/" :
         time += i
     else :
