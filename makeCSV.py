@@ -4,15 +4,7 @@ import sqlite3, csv, datetime
 
 dataRoot = '/srv/maze/dataOutput/recent/'
 
-temp = str(datetime.datetime.now())
-time = ""
-
-for i in temp:
-    if i != "/" :
-        time += i
-    else :
-        time += "-"
-
+time = datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S")
 
 db = sqlite3.connect('/srv/sqlite/data/gameData')
 cursor = db.cursor()
