@@ -21,8 +21,8 @@ cursor.execute("DROP TABLE IF EXISTS EchoData")
 cursor.execute('''
             CREATE TABLE EchoData(id INTEGER PRIMARY KEY, userName TEXT,
             currentLevel INTEGER, trackCount INTEGER,
-            echoLocation TEXT, postEchoAction TEXT, correctAction TEXT,
-            dateTimeStamp TEXT)''')
+            echoLocation TEXT, locationType TEXT, postEchoAction TEXT, correctAction TEXT,
+            echoFile TEXT, dateTimeStamp TEXT)''')
 
 cursor.execute("DROP TABLE IF EXISTS CrashData")
 cursor.execute('''
